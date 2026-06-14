@@ -13,7 +13,7 @@ wlabelinho.grid(row=2,column=0)
 wentryinho = tkinter.Entry()
 wentryinho.grid(row=2,column=1)
 
-hlabelinho = tkinter.Label(text="Enter Your Height (m):")
+hlabelinho = tkinter.Label(text="Enter Your Height (cm):")
 hlabelinho.grid(row=3,column=0)
 hentryinho = tkinter.Entry()
 hentryinho.grid(row=3,column=1)
@@ -22,7 +22,7 @@ def Calculating():
     try:
         weight = float(wentryinho.get())
         height = float(hentryinho.get())
-        bmi = weight / (height ** 2)
+        bmi = weight / (height / 100 ** 2)
         if bmi < 18.5:
             category = "Underweight"
         elif 18.5 <= bmi < 24.9:
