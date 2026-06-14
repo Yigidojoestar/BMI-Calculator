@@ -22,7 +22,7 @@ def Calculating():
     try:
         weight = float(wentryinho.get())
         height = float(hentryinho.get())
-        bmi = weight / (height / 100 ** 2)
+        bmi = weight / ((height / 100) ** 2)
         if bmi < 18.5:
             category = "Underweight"
         elif 18.5 <= bmi < 24.9:
